@@ -32,9 +32,13 @@ router.post("/signin", async (req, res) => {
 		return res.cookie("token", token).redirect("/");
 	} catch (error) {
 		return res.render("signin", {
-			error: "Incorect Email or Password",
+			error: "Incorrect Email or Password",
 		});
 	}
+});
+
+router.get("/logout", (req, res) => {
+	res.clearCookie("token").redirect("/");
 });
 
 module.exports = router;

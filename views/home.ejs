@@ -2,9 +2,10 @@
 <html lang="en">
 	<head>
 		<%- include("./partials/head.ejs") %>
-		<title>Document</title>
+		<title>Home</title>
 	</head>
 	<body>
-		<%- include("./partials/nav.ejs") %> <%- include("./partials/script.ejs") %>
+		<%- include("./partials/nav.ejs") %> <%= JSON.stringify(user) %> <%-
+		include("./partials/script.ejs") %>
 	</body>
 </html>
